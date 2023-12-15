@@ -1,3 +1,85 @@
+:root {
+    --blue: #19a2ae;
+    --dark-blue: #2d3248;
+    --gray: #6a6f81;
+    --white: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans';
+}
+
 body {
     background-color: #19a2ae;
+}
+
+.center {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2%;
+}
+
+.c-profile-card {
+    background-color: var(--white);
+    border-radius: 0.8rem;
+}
+
+.profile-card__banner,
+.profile-card__banner > img {
+    border-top-right-radius: 0.8rem;
+    border-top-left-radius: 0.8rem;
+}
+
+.profile-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.profile-card__avatar {
+    border-radius: 3.125rem;
+    border: 0.5rem solid var(--white);
+    width: 6.25rem;
+    height: 6.25rem;
+    position: absolute;
+    top: -2rem;
+}
+
+.profile-card__avatar img {
+    max-width: 100%;
+    border-radius: 3.125rem;
+}
+
+.profile-card__user-info {
+    margin-top: 4.9rem;
+    display: grid;
+    grid-template-areas:
+        'name age'
+        'city city';
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.profile-card__user-info h1 {
+    grid-area: 'name';
+    font-size: 1.12rem;
+    color: var(--dark-blue);
+}
+
+.profile-card__user-info span {
+    grid-area: 'age';
+    color: var(--gray);
+}
+
+.profile-card__user-info p {
+    grid-area: 'city';
+    color: var(--gray);
 }
