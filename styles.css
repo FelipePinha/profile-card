@@ -2,6 +2,7 @@
     --blue: #19a2ae;
     --dark-blue: #2d3248;
     --gray: #6a6f81;
+    --dark-gray: #969696;
     --white: #fff;
 }
 
@@ -41,6 +42,8 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
+    padding-bottom: 1.56rem;
+    border-bottom: 0.06rem solid var(--dark-gray);
 }
 
 .profile-card__avatar {
@@ -81,5 +84,21 @@ body {
 
 .profile-card__user-info p {
     grid-area: 'city';
+    color: var(--gray);
+}
+
+.profile-card__details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    text-align: center;
+    padding: 0.93rem;
+}
+
+.detail h2 {
+    color: var(--dark-blue);
+}
+
+.detail p {
     color: var(--gray);
 }
